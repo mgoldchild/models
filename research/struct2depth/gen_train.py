@@ -1,11 +1,11 @@
 from pathlib import Path
 
-result = list(Path("./preprocessing_in").rglob("**/*.png"))
+result = list(Path("./preprocessing_out").rglob("**/*.png"))
 result.sort()
 
 lines = []
 for i, o in enumerate(result):
-    full_path = str(o.parent.parent.resolve())
+    full_path = str(o.parent.resolve())
     file_name = o.stem
     line = "%s %s" % (full_path, file_name)
     lines.append(line)
