@@ -1,7 +1,7 @@
 #!bin/bash
-input_dir="/home/mike/apps/models/research/struct2depth/_inference_in"
-output_dir="/home/mike/apps/models/research/struct2depth/_inference_out"
-# model_checkpoint="/home/mike/apps/models/research/struct2depth/ckpt/model-199160"
+input_dir="/home/mike/apps/models/research/struct2depth/inference_in"
+output_dir="/home/mike/apps/models/research/struct2depth/inference_out"
+# model_checkpoint="/home/mike/apps/models/research/struct2depth/paper_ckpt/model-199160"
 # model_checkpoint="/home/mike/Downloads/model-96"
 
 LANG=en_US.UTF-8 python inference.py \
