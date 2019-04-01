@@ -35,8 +35,8 @@ HEIGHT = 128
 STEPSIZE = 1
 # INPUT_DIR = '/usr/local/google/home/anelia/struct2depth/KITTI_FULL/kitti-raw-uncompressed'
 # OUTPUT_DIR = '/usr/local/google/home/anelia/struct2depth/KITTI_procesed/'
-INPUT_DIR = "/home/mike/apps/models/research/struct2depth/in_dir"
-OUTPUT_DIR = "/home/mike/apps/models/research/struct2depth/out_dir"
+INPUT_DIR = "/home/mike/apps/models/research/struct2depth/preprocessing_in"
+OUTPUT_DIR = "/home/mike/apps/models/research/struct2depth/preprocessing_out"
 
 
 def get_line(file, start):
