@@ -46,7 +46,7 @@ flags.DEFINE_float('reconstr_weight', 0.85, 'Frame reconstruction loss weight.')
 flags.DEFINE_float('ssim_weight', 0.15, 'SSIM loss weight.')
 flags.DEFINE_float('smooth_weight', 0.04, 'Smoothness loss weight.')
 flags.DEFINE_float('icp_weight', 0.0, 'ICP loss weight.')
-flags.DEFINE_float('size_constraint_weight', 0.0005, 'Weight of the object '
+flags.DEFINE_float('size_constraint_weight', 0, 'Weight of the object ' # NOTE: Changed!
                    'size constraint loss. Use only when motion handling is '
                    'enabled.')
 flags.DEFINE_integer('batch_size', 4, 'The size of a sample batch')
@@ -83,7 +83,7 @@ flags.DEFINE_string('imagenet_ckpt', None, 'Initialize the weights according '
 flags.DEFINE_string('checkpoint_dir', None, 'Directory to save model '
                     'checkpoints.')
 flags.DEFINE_integer('train_steps', 10000000, 'Number of training steps.')
-flags.DEFINE_integer('summary_freq', 100, 'Save summaries every N steps.')
+flags.DEFINE_integer('summary_freq', 2, 'Save summaries every N steps.') # NOTE: Changed
 flags.DEFINE_bool('depth_upsampling', True, 'Whether to apply depth '
                   'upsampling of lower-scale representations before warping to '
                   'compute reconstruction loss on full-resolution image.')
@@ -103,7 +103,7 @@ flags.DEFINE_bool('joint_encoder', False, 'Whether to share parameters '
                   'encoder architecture. The egomotion network is then '
                   'operating only on the hidden representation provided by the '
                   'joint encoder.')
-flags.DEFINE_bool('handle_motion', True, 'Whether to try to handle motion by '
+flags.DEFINE_bool('handle_motion', False, 'Whether to try to handle motion by ' # NOTE: Changed!
                   'using the provided segmentation masks.')
 flags.DEFINE_string('master', 'local', 'Location of the session.')
 

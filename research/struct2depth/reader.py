@@ -82,12 +82,13 @@ class DataReader(object):
         _, image_contents = img_reader.read(image_paths_queue)
         seg_reader = tf.WholeFileReader()
         _, seg_contents = seg_reader.read(seg_paths_queue)
+        seg_seq = None # NOTE: modified!
         if self.file_extension == 'jpg':
           image_seq = tf.image.decode_jpeg(image_contents)
           seg_seq = tf.image.decode_jpeg(seg_contents, channels=3)
         elif self.file_extension == 'png':
           image_seq = tf.image.decode_png(image_contents, channels=3)
-          seg_seq = tf.image.decode_png(seg_contents, channels=3)
+          # seg_seq = tf.image.decode_png(seg_contents, channels=3) # NOTE: changed!
 
       with tf.name_scope('load_intrinsics'):
         cam_reader = tf.TextLineReader()
@@ -106,8 +107,14 @@ class DataReader(object):
         with tf.name_scope('image_augmentation'):
           image_seq = self.augment_image_colorspace(image_seq)
 
+      # NOTE: here is modified
       image_stack = self.unpack_images(image_seq)
-      seg_stack = self.unpack_images(seg_seq)
+      # seg_stack = self.unpack_images(seg_seq)
+      seg_stack = None
+      if seg_seq is not None:
+        seg_stack = self.unpack_images(seg_seq)
+      else:
+          seg_stack = tf.identity(image_stack)
 
       if self.flipping_mode != FLIP_NONE:
         random_flipping = (self.flipping_mode == FLIP_RANDOM)
