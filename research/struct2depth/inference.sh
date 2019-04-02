@@ -3,7 +3,9 @@ input_dir="/home/mike/apps/models/research/struct2depth/inference_in"
 output_dir="/home/mike/apps/models/research/struct2depth/inference_out"
 # model_checkpoint="/home/mike/apps/models/research/struct2depth/paper_ckpt/model-199160"
 # model_checkpoint="/home/mike/Downloads/model-96"
-model_checkpoint="/home/mike/Downloads/model-9968"
+# model_checkpoint="/home/mike/Downloads/model-9968"
+# model_checkpoint="/home/mike/Downloads/model-4424"
+model_checkpoint="/home/mike/Downloads/model-2264"
 
 python inference.py \
     --logtostderr \
