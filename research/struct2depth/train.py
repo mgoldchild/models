@@ -216,6 +216,12 @@ def train(train_model, pretrained_ckpt, imagenet_ckpt, checkpoint_dir,
     if checkpoint:
       saver.restore(sess, checkpoint)
 
+    # NOTE: for visualize graph by tensorboard
+    # cmd is tensorboard --logdir=output
+    # writer = tf.summary.FileWriter("output", sess.graph_def)
+    # writer.close()
+    # return
+
     logging.info('Training...')
     start_time = time.time()
     last_summary_time = time.time()
