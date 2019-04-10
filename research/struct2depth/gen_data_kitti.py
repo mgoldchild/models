@@ -94,12 +94,12 @@ if not OUTPUT_DIR.endswith('/'):
 for d in glob.glob(INPUT_DIR + '/*/'):
     date = d.split('/')[-2]
     file_calibration = d + 'calib_cam_to_cam.txt'
-    calib_raw = [get_line(file_calibration, 'P_rect_02'), get_line(file_calibration, 'P_rect_03')]
+    calib_raw = [get_line(file_calibration, 'P_rect_02')] # , get_line(file_calibration, 'P_rect_03')]
 
     for d2 in glob.glob(d + '*/'):
         seqname = d2.split('/')[-2]
         print('Processing sequence', seqname)
-        for subfolder in ['image_02/data', 'image_03/data']:
+        for subfolder in ['image_02/data']: # , 'image_03/data']:
             ct = 1
             seqname = d2.split('/')[-2] + subfolder.replace('image', '').replace('/data', '')
             if not os.path.exists(OUTPUT_DIR + seqname):
