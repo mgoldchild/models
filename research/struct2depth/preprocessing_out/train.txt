@@ -272,4 +272,3 @@
 /home/mike/apps/models/research/struct2depth/preprocessing_out/2011_09_26_drive_0048_extract_02 0000000272
 /home/mike/apps/models/research/struct2depth/preprocessing_out/2011_09_26_drive_0048_extract_02 0000000273
 /home/mike/apps/models/research/struct2depth/preprocessing_out/2011_09_26_drive_0048_extract_02 0000000274
-/home/mike/apps/models/research/struct2depth/preprocessing_out/2011_09_26_drive_0048_extract_02 0000000275
