@@ -6,7 +6,9 @@ output_dir="/home/mike/apps/models/research/struct2depth/inference_out"
 # model_checkpoint="/home/mike/Downloads/model-9968"
 # model_checkpoint="/home/mike/Downloads/model-4424"
 # model_checkpoint="/home/mike/Downloads/model-2264"
-model_checkpoint="/home/mike/apps/models/research/struct2depth/training_out/model-204"
+# model_checkpoint="/home/mike/apps/models/research/struct2depth/training_out/model-204"
+# model_checkpoint="/home/mike/Downloads/model-570"
+model_checkpoint="/home/mike/apps/models/research/struct2depth/training_out/model-95"
 
 python inference.py \
     --logtostderr \
