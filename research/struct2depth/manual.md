@@ -4,6 +4,7 @@
 1. calibration取得
 2. video撮影
 3. 画像変換
+3. 画像をpreprocessing_inに入れる
 4. 前処理
 5. train.txtの作成
 6. train.txtをpreprocessing_outに入れる
