@@ -17,6 +17,7 @@
 10. ps aux | grep sh
 11. kill -9 PID
 11. model回収
+12. out.logの回収
 12. inference.shのパスを変更
 13. inference.shを実行
 
