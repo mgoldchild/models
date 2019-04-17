@@ -1,5 +1,7 @@
 # やること備忘録
 
+0. git checkout .
+0. git clean -f 
 0. training_outのフォルダを空に
 1. calibration取得
 2. video撮影
